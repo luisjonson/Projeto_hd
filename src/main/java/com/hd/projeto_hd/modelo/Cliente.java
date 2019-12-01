@@ -13,11 +13,11 @@ public class Cliente {
 	private Long id;
 	private String nome;
 	private String telefone;
-	//private Endereco endereco;
+	private Endereco enderecoId;
 
 	@Id
 	@GeneratedValue
-	public Long getId() {
+	public Long getId(Long id) {
 		return id;
 	}
 
@@ -43,12 +43,12 @@ public class Cliente {
 		this.telefone = telefone;
 	}
 
-	/*public Endereco getEndereco() {
-		return endereco;
+	public Endereco getEnderecoId() {
+		return enderecoId;
 	}
 
-	public void setEndereco(Endereco endereco) {
-		this.endereco = endereco;
+	public void setEnderecoId(Endereco enderecoId) {
+		this.enderecoId = enderecoId;
 	}
 
 	@Override
@@ -58,7 +58,7 @@ public class Cliente {
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
-*/
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -76,4 +76,5 @@ public class Cliente {
 		return true;
 	}
 
+	
 }
