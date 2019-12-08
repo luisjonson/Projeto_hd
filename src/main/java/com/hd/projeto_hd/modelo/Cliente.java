@@ -2,7 +2,6 @@ package com.hd.projeto_hd.modelo;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -13,10 +12,10 @@ public class Cliente {
 	private Long id;
 	private String nome;
 	private String telefone;
-	private Endereco enderecoId;
+	private Endereco endereco;
+	private String observacao;
 
 	@Id
-	@GeneratedValue
 	public Long getId(Long id) {
 		return id;
 	}
@@ -43,12 +42,12 @@ public class Cliente {
 		this.telefone = telefone;
 	}
 
-	public Endereco getEnderecoId() {
-		return enderecoId;
+	public Endereco getEndereco() {
+		return endereco;
 	}
 
-	public void setEnderecoId(Endereco enderecoId) {
-		this.enderecoId = enderecoId;
+	public void setEndereco(Endereco endereco) {
+		this.endereco = endereco;
 	}
 
 	@Override
@@ -76,5 +75,12 @@ public class Cliente {
 		return true;
 	}
 
-	
+	public String getObservacao() {
+		return observacao;
+	}
+
+	public void setObservacao(String observacao) {
+		this.observacao = observacao;
+	}
+
 }

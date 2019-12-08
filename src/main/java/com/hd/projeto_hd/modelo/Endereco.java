@@ -7,6 +7,7 @@ public class Endereco {
 	private String rua;
 	private String numeroCasa;
 	private String referencia;
+	private String imagem;
 
 	public Long getId() {
 		return id;
@@ -71,6 +72,14 @@ public class Endereco {
 		} else if (!id.equals(other.id))
 			return false;
 		return true;
+	}
+
+	public String getImagem() {
+		return imagem;
+	}
+
+	public void setImagem(String imagem) {
+		this.imagem = imagem;
 	}
 
 }
